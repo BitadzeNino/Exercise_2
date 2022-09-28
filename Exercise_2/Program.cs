@@ -115,3 +115,17 @@
 //}
 
 
+int[] arr = { 1, 4, 2, 5, 23 };
+int length = arr.Length;
+//Console.WriteLine(length + " " + arr[0]);
+int a = length - 1;
+int[] newArray = new int[length];
+for (int i = 0; i < length; i++)
+{
+    
+    newArray[a] = arr[i];
+    a--;
+    Console.WriteLine(newArray[i]);
+}
+
+
