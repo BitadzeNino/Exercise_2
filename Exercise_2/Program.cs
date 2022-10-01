@@ -27,6 +27,16 @@
 //Console.WriteLine("enter the number : ");
 //string num = Console.ReadLine();
 //bool check = int.TryParse(num, out int a);
+//int[] arr = new int[a];
+//int n = 0;
+//for(int i = 0; i <= a; i++)
+//{
+
+//    Console.WriteLine(arr[i] +"");
+
+
+//}
+
 
 
 //კლავიატურიდან შემოიტანეთ რიცხვი და დათვალეთ
@@ -53,6 +63,7 @@
 
 //დაწერეთ პროგრამა რომელიც კლავიატურიდან შემოტანილი
 //რიცხვისთვის დაითვლის 1-დან n მდე ამ რიცხვების კვადრატების ჯამს.
+
 //Console.WriteLine("Enter the number: " );
 //string num = Console.ReadLine();
 //bool check = int.TryParse(num, out int a);
@@ -75,40 +86,41 @@
 
 //Console.WriteLine("Enter the string: ");
 //string num = Console.ReadLine();
-//int a = num.Length;
-//int c = a / 2;
+//int length = num.Length;
+//int c = length / 2;
 //int b = num.Length % 2;
 //int i = 0;
 //int j = 1;
 //if (b == 0)
-//{
-//    if (j <= c)
-//    {
-//        while (num[i] == num[a - j])
+//{  
+//      while(c != i)
+//      {
+//          if (num[i] != num[length - j])
+//          {
+//            Console.WriteLine("no reversable");
+//            break; 
+//          }
+//        j++;
+//        i++;
+//        if(i == c)
 //        {
-//            i++;
-//            j++;
-//            Console.WriteLine("is iitt");
+//            Console.WriteLine("revarsable");
 //        }
-
-//    }
+//      }  
 //}
 //else
 //{
 //    Console.WriteLine("no reversable");
 //}
 
-//////////
-//ვერ გავიგე ეს დავალება
+
 //////////////
 //მოცემულია მასივი, რომელიც შეგიძლიათ შეავსთ კლავიატურიდანაც და პროგრამიდანაც.
 //დაწერეთ პროგრამა რომელიც დაითვლის ამ მასივში თითოეული ელემენტის რაოდენობას,
 
-//Console.WriteLine("Enter the array elements: ");
-//string n = Console.ReadLine();
-//bool check = int.TryParse(n, out int a);
-//int[] arr = new int[a];
-////int arr_length = arr.Length;
+
+//int[] arr = new int[5];
+//int count = 0;
 //for (int i = 0; i < arr.Length; i++)
 //{
 //    Console.WriteLine("Enter the elements: ");
@@ -116,10 +128,12 @@
 //    bool check_2 = int.TryParse(s, out int elem);
 //    arr[i] = elem;
 //}
-//for(int j = 0; j < arr.Length; j++)
+//for (int j = 0; j < arr.Length; j++)
 //{
-//    Console.WriteLine($"arr. elements {arr[j]}");
+//    count++;
 //}
+//Console.WriteLine($"arr. elements {count}");
+
 
 /////////////////////////////////////////////////////////
 //დაწერეთ პროგრამა რომელიც მასივში დაითვლის
@@ -164,21 +178,54 @@
 //    Console.WriteLine("medium: " + (arr[(arr.Length / 2)]));
 //}
 
+
+
+
 //დაწერეთ პროგრამა რომელიც მოცემულ
 //მასივს დაბეჭდავს შებრუნებული სახით მაგ 1 2 3 4 —-> 4 3 2 1
 
-Console.WriteLine("Enter the arrays emenemts: ");
-int[] arr = new int[4];
 
-for (int i = 0; i < arr.Length; i++)
-{
-    string a = Console.ReadLine();
-    bool check = int.TryParse(a, out int result);
-    arr[i] = result;
-}
-for (int j = 1; j <= (arr.Length); j++)
-{
-    Console.WriteLine(arr[arr.Length-j]);
-}
+//Console.WriteLine("Enter the arrays emenemts: ");
+//int[] arr = new int[4];
+
+//for (int i = 0; i < arr.Length; i++)
+//{
+//    string a = Console.ReadLine();
+//    bool check = int.TryParse(a, out int result);
+//    arr[i] = result;
+//}
+//for (int j = 1; j <= (arr.Length); j++)
+//{
+//    Console.WriteLine(arr[arr.Length-j]);
+//}
+
+
+
+//დაწერეთ პროგრამა რომელიც დაბეჭდავს მასივში
+//მხოლოდ იმ ელემენტებს რომლებიც გვხვდება 1 ხელ.
+
+//int[] arr = { 1, 1, 2, 3, 4 };
+//for (int i = 0; i < arr.Length; i++)
+//{
+//    int a = 0;
+//    while (a < arr.Length)
+//    {
+//        if (a != i || i == arr.Length - 1)
+//        {
+//            if (arr[i] == arr[a] && i != arr.Length - 1)
+//            {
+//                break;
+//            }
+//            if (a == (arr.Length - 1))
+//            {
+//                Console.WriteLine("write " + arr[i]);
+//            }
+//        }
+//        a++;
+//    }
+//}
+
+
+
 
 
