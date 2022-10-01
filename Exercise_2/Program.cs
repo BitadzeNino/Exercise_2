@@ -1,131 +1,184 @@
-﻿//int counter = 12;
-//while(counter >= 0)
-//{
-//    Console.WriteLine("papp" + counter);
-//    counter--;
-//}
+﻿//დაწერეთ პროგრამა რომელიც კლავიატურიდან შეიტანს 10 ელემენტს
+//და შეავსებს მასივს. (სცადეთ სხვადასხვა ტიპისთვის)
 
 
-
-//Console.WriteLine("numer of sum:");
-//string a = Console.ReadLine();
-//bool check = int.TryParse(a, out int b);
-//int sum = 1;
-//int num = 1;
-//while(num < b)
-//{
-//    num++;
-//    sum += num;
-//    Console.WriteLine(" + " + num);
-//}
-//Console.WriteLine(" = " + sum);
-
-
-
-//Console.WriteLine("factorial : ");
-//string lel = Console.ReadLine();
-//bool num = int.TryParse(lel, out int nan);
-//decimal bab = 1;
-//do
-//{
-//    bab *= nan;
-//    nan--;
-//} while (nan > 0);
-//Console.WriteLine("result: "+ bab);
-
-
-
-
-//Console.WriteLine(" n = ");
-//int n = int.Parse(Console.ReadLine());
-//Console.WriteLine("m = ");
-//int m = int.Parse(Console.ReadLine());
-//int num = n;
-//long product = 1;
-//do
-//{
-//    product *= num;
-//    num++;
-//} while (num <= m);
-//Console.WriteLine(" [n...m] =  " + product);    
-
-
-// for loop
-//Console.WriteLine(" n = ");
-//int n = int.Parse(Console.ReadLine());
-//Console.WriteLine(" m = ");
-//int m = int.Parse(Console.ReadLine());
-//long sum = 1;
-//for(int i = 0; i < m; i++)
-//{
-//    sum *= n;
-
-//}
-//Console.WriteLine(" sum = " + sum);
-
-
-
-
-//int n = 6;
-//for (int row = 1; row <= n; row++)
-//{
-//    for (int col = 1; col < row; col++)
-//    {
-//        Console.WriteLine(" " + col);
-//    }
-//    Console.WriteLine("");
-//}
-
-
-// try lotto
-//using System.Numerics;
-
-//BigInteger sum = 0;
-//for(int i1 = 1; i1 < 44; i1++)
-//{
-//    for (int i2 = 1; i2 < 45; i2++)
-//    {
-//        for (int i3 = 1; i3 < 46; i3++)
-//        {
-//            for(int i4 = 1; i4 < 47; i4++)
-//            {
-//                for(int i5 = 1; i5 < 48; i5++)
-//                {
-//                    for (int i6 = 1; i6 < 49; i6++)
-//                    {
-//                        sum++;
-//                        Console.WriteLine(sum);
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
-//Console.WriteLine(sum);
-
-
-
-// new array
-
-//int[] arr = new int[12];
+//Console.WriteLine("Enter the Massive Element: ");
+//int[] arr = new int[10];
 //for (int i = 0; i < arr.Length; i++)
 //{
-//    arr[i] = i;
+//    string num = Console.ReadLine();
+//    bool check = int.TryParse(num, out int a);
+//    if (check)
+//    {
+//        arr[i] = a;
+//    }
+
+//}
+//for (int i = 0; i < arr.Length; i++)
+//{
 //    Console.WriteLine(arr[i]);
 //}
 
 
-int[] arr = { 1, 4, 2, 5, 23 };
-int length = arr.Length;
-//Console.WriteLine(length + " " + arr[0]);
-int a = length - 1;
-int[] newArray = new int[length];
-for (int i = 0; i < length; i++)
+//დაწერეთ პროგრამა რომელიც კლავიატურიდან შემოიტანს რიცხვს n-ს
+//და დაბეჭდავს 1-დან n მდე რიცხვებს ისე როგორც სურათზეა(სურ 1).
+//(თითო ხაზზე ელემენტების რაოდენობა იზრდება 1-ით)
+
+//Console.WriteLine("enter the number : ");
+//string num = Console.ReadLine();
+//bool check = int.TryParse(num, out int a);
+
+
+//კლავიატურიდან შემოიტანეთ რიცხვი და დათვალეთ
+//1-დან n მდე კენტი რიცხვების ჯამი, ნამრავლი.
+
+//Console.WriteLine("enter the number : ");
+//string num = Console.ReadLine();
+//bool check = int.TryParse(num, out int a);
+//if (check)
+//{
+//    int summ = 0;
+//    int mult = 1;
+//    for (int i = 1; i <= a; i++)
+//    {
+//        if (i % 2 == 1)
+//        {
+//            summ += i;
+//            mult *= i;
+//        }
+//    }
+//    Console.WriteLine(" summ: " + summ + "\n mult:  " + mult);
+//}
+
+
+//დაწერეთ პროგრამა რომელიც კლავიატურიდან შემოტანილი
+//რიცხვისთვის დაითვლის 1-დან n მდე ამ რიცხვების კვადრატების ჯამს.
+//Console.WriteLine("Enter the number: " );
+//string num = Console.ReadLine();
+//bool check = int.TryParse(num, out int a);
+//if (check)
+//{
+//    int b = 1;
+//    int result = 0;
+//    while (b <= a)
+//    {
+//        result += (b * b);
+//        b++;
+//    }
+//    Console.WriteLine($"result is : {result}");
+//}
+
+
+
+//დაწერეთ პროგრამა რომელიც შეამოწმებს არის თუ არა სტრინგი პალინდრომი.
+//(პალინდრომია სტრინგი თუ ის შებრუნებული სახითაც იგივენაირად იკითხება) asdffdsa
+
+//Console.WriteLine("Enter the string: ");
+//string num = Console.ReadLine();
+//int a = num.Length;
+//int c = a / 2;
+//int b = num.Length % 2;
+//int i = 0;
+//int j = 1;
+//if (b == 0)
+//{
+//    if (j <= c)
+//    {
+//        while (num[i] == num[a - j])
+//        {
+//            i++;
+//            j++;
+//            Console.WriteLine("is iitt");
+//        }
+
+//    }
+//}
+//else
+//{
+//    Console.WriteLine("no reversable");
+//}
+
+//////////
+//ვერ გავიგე ეს დავალება
+//////////////
+//მოცემულია მასივი, რომელიც შეგიძლიათ შეავსთ კლავიატურიდანაც და პროგრამიდანაც.
+//დაწერეთ პროგრამა რომელიც დაითვლის ამ მასივში თითოეული ელემენტის რაოდენობას,
+
+//Console.WriteLine("Enter the array elements: ");
+//string n = Console.ReadLine();
+//bool check = int.TryParse(n, out int a);
+//int[] arr = new int[a];
+////int arr_length = arr.Length;
+//for (int i = 0; i < arr.Length; i++)
+//{
+//    Console.WriteLine("Enter the elements: ");
+//    string s = Console.ReadLine();
+//    bool check_2 = int.TryParse(s, out int elem);
+//    arr[i] = elem;
+//}
+//for(int j = 0; j < arr.Length; j++)
+//{
+//    Console.WriteLine($"arr. elements {arr[j]}");
+//}
+
+/////////////////////////////////////////////////////////
+//დაწერეთ პროგრამა რომელიც მასივში დაითვლის
+//ამ მასივში უმცირეს,უდიდეს ელემენტს და იპოვნის მედიანას(შუა წევრს)
+
+
+//int[] arr = new int[5];
+//int smallest=0;
+//int biggest=0;
+//byte po_f = 0;
+//for(int i = 0; i < arr.Length; i++)
+//{
+//    string a = Console.ReadLine();
+//    bool check = int.TryParse(a, out int b);
+//    arr[i] = b;   
+//    while(po_f == 0)
+//    {
+//        smallest = arr[i];
+//        biggest = arr[i];
+//        po_f++;
+//    }
+//    if(arr[i] >= biggest)
+//    {
+//        biggest = arr[i];
+//    }
+//    if (arr[i] <= smallest)
+//    {
+//        smallest = arr[i];
+//    }
+//    po_f++;
+
+
+//}
+//Console.WriteLine($"the biggest is: {biggest}");
+//Console.WriteLine($"\nthe smallest is: {smallest}");
+//if ((arr.Length % 2) == 0)
+//{
+//    Console.WriteLine("NO MEDIUM NUMBER");
+//}
+//else
+//{
+//    Console.WriteLine("medium: " + (arr[(arr.Length / 2)]));
+//}
+
+//დაწერეთ პროგრამა რომელიც მოცემულ
+//მასივს დაბეჭდავს შებრუნებული სახით მაგ 1 2 3 4 —-> 4 3 2 1
+
+Console.WriteLine("Enter the arrays emenemts: ");
+int[] arr = new int[4];
+
+for (int i = 0; i < arr.Length; i++)
 {
-    
-    newArray[a] = arr[i];
-    a--;
-    Console.WriteLine(newArray[i]);
+    string a = Console.ReadLine();
+    bool check = int.TryParse(a, out int result);
+    arr[i] = result;
+}
+for (int j = 1; j <= (arr.Length); j++)
+{
+    Console.WriteLine(arr[arr.Length-j]);
 }
 
 
